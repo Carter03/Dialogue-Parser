@@ -1,0 +1,20 @@
+<scene>
+<scene> openingScene
+<mainCharacter><~> Who is this guy?
+<foo> Hey there! How are you?	
+<option> OP1						
+    <1> Not good :(					
+    <2> Great!							
+</>							
+<choices>							
+    <OP1><1>					
+        <foo> Oh no!				
+     <foo> Anyway...
+    <//>						
+    <OP1><2>							
+        <foo> Good to hear.
+        <END>							
+    <//>
+</>									
+<mainCharacter> Hey! Not nice!
+<END>
