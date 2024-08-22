@@ -16,9 +16,9 @@ Text files should be written in the following structure:
 
 	<keyword><argument> dialogue text
 	
-The only permitted arguments are \<~\> and \<1\> (or \<2\>, \<3\>, ...)
-<~> is the *thinking* indicator.
-<[int]> is the option selection argument.
+The only permitted arguments are \<\~\> and \<1\> (or \<2\>, \<3\>, ...)\
+<~> is the *thinking* indicator.\
+<[int]> is the option selection argument.\
 All other lines should omit the argument.
 
 Dialogue Parser has ~**six keywords**:
@@ -31,12 +31,12 @@ Dialogue Parser has ~**six keywords**:
 |/| option / choice end | (see above)
 |//| path branch end | (see above)
 
-Anything in <> that is not a keyword *and* is not a previously defined option name will be interpreted as a player name.
+Anything in <> that is not a keyword *and* is not a previously defined option name will be interpreted as a player name.\
 Ex: `<foobario> Hi! I'm Foobario.`
 
 ## Example Dialogue
 
-This example dialogue is annotated with "//" comments.
+This example dialogue is annotated with "//" comments.\
 **NOTE:** comments are *not* supported in the parser. These are for illustrative purposes only. Adding them with produce errors or unexpected behavior.
 
     <scene>										// first line is ignored (still must follow syntax)
@@ -63,7 +63,7 @@ This example dialogue is annotated with "//" comments.
 # Additional Information
 ## Choice Operators / Composition
 
-To require multiple options to have been chosen, you must redeclare \<choices\>.
+To require multiple options to have been chosen, you must redeclare \<choices\>.\
 (Note the \</\> and \<//\> placements)
 
     <choices>
@@ -76,7 +76,7 @@ To require multiple options to have been chosen, you must redeclare \<choices\>.
 		<//>
 	</>
 
-To require for one option OR another option to have been chosen, there is not a clean method.
+To require for one option OR another option to have been chosen, there is not a clean method.\
 One way is to duplicate the \<choices\> block:
 
     <choices>
@@ -163,7 +163,7 @@ There are only two DialogueEngine methods:
 	
     EngineNode node = engine.GetNext()
 	
-Whenever you want the next line of dialogue, call GetNext.
+Whenever you want the next line of dialogue, call GetNext.\
 This returns an EngineNode (not to be confused with Node, which was only used when creating the engine).
 
 EngineNode simply stores the following public fields:
