@@ -16,7 +16,7 @@ Text files should be written in the following structure:
 
 	<keyword><argument> dialogue text
 	
-The only permitted arguments are <~> and <1> (or <2>, <3>, ...)
+The only permitted arguments are \<~\> and \<1\> (or \<2\>, \<3\>, ...)
 <~> is the *thinking* indicator.
 <[int]> is the option selection argument.
 All other lines should omit the argument.
@@ -26,7 +26,7 @@ Dialogue Parser has ~**six keywords**:
 |--|--|--|
 |scene| event identifier | \<scene\> foobarSing_01
 |END| end dialogue sequence | \<END\>
-|option| player choice | \<option\> OP1<br/>&emsp;<1> this is option one<br/>&emsp;<2> this is option two<br/></>
+|option| player choice | \<option\> OP1<br/>&emsp;\<1\> this is option one<br/>&emsp;<2> this is option two<br/></>
 |choice| automatic branching due<br/>to prior option selection| \<choice\><br/>&emsp;\<OP1\>\<1\><br/>&emsp;&emsp;...<br/>&emsp;<//><br/>&emsp;<OP1\>\<2\><br/>&emsp;&emsp;...<br/>&emsp;<//><br/></> |
 |/| option / choice end | (see above)
 |//| path branch end | (see above)
