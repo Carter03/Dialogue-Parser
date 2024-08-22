@@ -4,48 +4,6 @@ using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 
-public class Parsing
-{
-    public static Parsing(string path)
-    {
-        List<string> lines = File.ReadAllLines(path).Select(line => line.Trim()).ToList();
-        Parser parser = new Parser(lines);
-        Node root = parser.ParseFull();
-        DialogueEngine engine = new DialogueEngine(root);
-
-        EngineNode node = engine.GetNext();
-        while (node != null) // or (node.Type != DialogueType.end)
-        {
-            Console.WriteLine($"type: {node.Type} | name: {node.Name} | content: {node.Content} | choices: {String.Join(" ; ", node.Choices.ToArray())}");
-            if (node.Type == DialogueType.option)
-            {
-                engine.SelectOption(0); // select first option
-            }
-            node = engine.GetNext();
-        }
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            node = engine.GetNext();
-            Debug.Log($"type: {node.Type} | name: {node.Name} | content: {node.Content} | choices: {String.Join(" ; ", node.Choices.ToArray())}");
-        }
-        if (node != null && node.Type == DialogueType.option)
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                engine.SelectOption(1);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                engine.SelectOption(2);
-            }
-        }
-    }
-}
-
 public class DialogueEngine
 {
     public Node currentNode;
