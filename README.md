@@ -39,25 +39,25 @@ Ex: `<foobario> Hi! I'm Foobario.`
 This example dialogue is annotated with "//" comments.\
 **NOTE:** comments are *not* supported in the parser. These are for illustrative purposes only. Adding them with produce errors or unexpected behavior.
 
-    <scene>										// first line is ignored (still must follow syntax)
-    <scene> openingScene						// stores scene name as string
+    <scene>						// first line is ignored (still must follow syntax)
+    <scene> openingScene				// stores scene name as string
     <mainCharacter><~> Who is this guy?			// thinking
-    <foo> Hey there! How are you?				// foo is a person
-    <option> OP1								// option stored as OP1 (could be anything except intended person name)
-        <1> Not good :(							// player option 1
-        <2> Great!								// player option 2
-    </>											// option must be closed with </>
-    <choices>									// path splits here
-        <OP1><1>								// if player chose option 1 in OP1:
-            <foo> Oh no!						// path continues here
+    <foo> Hey there! How are you?			// foo is a person
+    <option> OP1					// option stored as OP1 (could be anything except intended person name)
+        <1> Not good :(					// player option 1
+        <2> Great!					// player option 2
+    </>							// option must be closed with </>
+    <choices>						// path splits here
+        <OP1><1>					// if player chose option 1 in OP1:
+            <foo> Oh no!				// path continues here
 	        <foo> Anyway...
-        <//>									// path split must be closed with <//>
-        <OP1><2>								// if player chose option 2:
+        <//>						// path split must be closed with <//>
+        <OP1><2>					// if player chose option 2:
             <foo> Good to hear.
-            <END>								// abruptly end (will not continue)
+            <END>					// abruptly end (will not continue)
         <//>
-    </>											// choices block must be closed with </>
-    <mainCharacter> Hey! Not nice!				// all paths resume here (unless ENDed)
+    </>							// choices block must be closed with </>
+    <mainCharacter> Hey! Not nice!			// all paths resume here (unless ENDed)
     <END>
 
 # Additional Information
