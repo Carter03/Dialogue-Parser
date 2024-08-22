@@ -1,6 +1,6 @@
 # C# Dialogue Parser
 
-Easy to use API for reading dialogue from text files in custom dialogue format.
+Easy to use API for reading dialogue from text files in custom dialogue format.\
 Support for:
 * Unlimited different speaker names
 * Scene names/IDs
@@ -11,7 +11,7 @@ Support for:
 
 # Dialogue Language (File Structure)
 
-Dialogue Parser reads from .txt files written in a specific format.
+Dialogue Parser reads from .txt files written in a specific format.\
 Text files should be written in the following structure:
 
 	<keyword><argument> dialogue text
